@@ -8,13 +8,37 @@
 <body>
 
     <div class="container">
-        <h1>JPEG → PNG Converter</h1>
+        <h1>Image Converter</h1>
 
-        <input type="file" id="fileInput" accept="image/jpeg">
-        <button onclick="convertImage()">Convert</button>
+        <!-- Drag & Drop Zone -->
+        <div id="dropZone">Drag & Drop Images Here</div>
+        <input type="file" id="fileInput" multiple accept="image/*">
 
-        <br><br>
-        <a id="downloadLink" style="display:none;">Download PNG</a>
+        <div class="selectors">
+            <label>Convert from:</label>
+            <select id="fromFormat">
+                <option value="image/jpeg">JPG</option>
+                <option value="image/png">PNG</option>
+                <option value="image/webp">WEBP</option>
+            </select>
+
+            <label>to:</label>
+            <select id="toFormat">
+                <option value="image/png">PNG</option>
+                <option value="image/jpeg">JPG</option>
+                <option value="image/webp">WEBP</option>
+            </select>
+        </div>
+
+        <button onclick="convertImages()">Convert</button>
+
+        <!-- Progress -->
+        <div id="progressContainer">
+            <div id="progressBar"></div>
+        </div>
+
+        <div id="status"></div>
+        <div id="results"></div>
     </div>
 
     <script src="script.js"></script>
