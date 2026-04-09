@@ -1,0 +1,179 @@
+:root {
+    --bg-dark: #121212;
+    --bg-light: #f0f0f0;
+    --text-dark: #ffffff;
+    --text-light: #111111;
+    --primary: #4CAF50;
+    --secondary: #FFC107;
+    --absent: #444;
+    --correct: #6aaa64;
+    --present: #c9b458;
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+    --font-stack: 'Segoe UI', sans-serif;
+}
+
+body {
+    font-family: var(--font-stack);
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+    body.light-mode {
+        background-color: var(--bg-light);
+        color: var(--text-light);
+    }
+
+header {
+    text-align: center;
+    padding: 1em;
+    border-bottom: 1px solid #333;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+}
+
+.mode-toggle, .social-links {
+    margin: 0.5em auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+button, .social-button {
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+    button:hover, .social-button:hover {
+        background-color: #388e3c;
+    }
+
+.social-button {
+    text-decoration: none;
+    background-color: #1da1f2;
+}
+
+#themeToggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    font-size: 1.4em;
+    padding: 0.2em 0.5em;
+}
+
+main {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 0 1em;
+    text-align: center;
+}
+
+#ad-container {
+    margin-top: 2em;
+}
+
+    #ad-container ins {
+        display: block;
+        margin: 1em 0;
+    }
+
+#clues p {
+    text-align: left;
+    margin: 0.5em 0;
+    padding: 0.3em 0.5em;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+}
+
+#board {
+    margin: 1.5em 0;
+}
+
+.guess-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.4em;
+}
+
+.letter-box {
+    width: 3em;
+    height: 3em;
+    margin: 0 0.2em;
+    line-height: 3em;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+    transition: background-color var(--transition-speed);
+}
+
+.correct {
+    background-color: var(--correct);
+    color: white;
+}
+
+.present {
+    background-color: var(--present);
+    color: white;
+}
+
+.absent {
+    background-color: var(--absent);
+    color: white;
+}
+
+#inputSection {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    margin-bottom: 1em;
+}
+
+#guessInput {
+    padding: 0.6em;
+    font-size: 1.1em;
+    width: 150px;
+    border-radius: var(--border-radius);
+    border: 1px solid #888;
+}
+
+#submitBtn {
+    font-size: 1.1em;
+}
+
+#message {
+    margin-top: 1em;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#returnBtn {
+    margin-top: 2em;
+}
+
+@media (max-width: 600px) {
+    .letter-box {
+        width: 2.5em;
+        height: 2.5em;
+        font-size: 1.3em;
+    }
+
+    #guessInput {
+        width: 100px;
+    }
+}

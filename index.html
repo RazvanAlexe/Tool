@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cluedle – Chain Logic Word Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1543393485405472"
+            crossorigin="anonymous"></script>
+</head>
+<body class="dark-mode">
+    <header>
+        <h1>Cluedle</h1>
+        <div class="mode-toggle">
+            <button id="dailyBtn">Daily Challenge</button>
+            <button id="practiceBtn">Practice Mode</button>
+        </div>
+        <div class="social-links">
+            <a href="https://twitter.com/razvanalexe95" target="_blank" class="social-button">Twitter</a>
+            <a href="https://ko-fi.com/razvanalexe" target="_blank" class="social-button">Buy Me a Ko-fi</a>
+        </div>
+        <button id="themeToggle" title="Toggle theme">☼</button>
+    </header>
+
+    <main id="gameContainer" style="display:none;">
+        <section id="clues"></section>
+        <section id="board"></section>
+
+        <section id="inputSection">
+            <input type="text"
+                   id="guessInput"
+                   maxlength="5"
+                   autocomplete="off"
+                   placeholder="Enter 5-letter word" />
+            <button id="submitBtn">Submit</button>
+        </section>
+
+        <p id="message"></p>
+        <button id="returnBtn">Return to Menu</button>
+
+        <div id="shareBox" style="display:none;">
+            <p>📋 Share your result:</p>
+            <textarea readonly rows="6" style="width:100%;"></textarea>
+            <button onclick="copyResult()">Copy</button>
+        </div>
+
+        <div class="ad-container">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1543393485405472"
+                 data-ad-slot="1234567890"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </main>
+
+    <script src="clues.js"></script>
+    <script src="cluedle.js"></script>
+</body>
+</html>
